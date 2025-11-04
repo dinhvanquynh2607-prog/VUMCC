@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VUMCC — Câu lạc bộ Truyền thông</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#ff7a59; /* warm accent */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#07101a);color:#e6eef8;line-height:1.45}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#0ea5a0,#0284c7);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .logo svg{width:30px;height:30px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a.cta{background:linear-gradient(90deg,var(--accent),#ff5a3c);padding:10px 14px;border-radius:10px;color:white}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;padding:28px 0}
+    .hero-left h1{font-size:34px;margin:0 0 10px}
+    .hero-left p{color:var(--muted);margin:0 0 18px}
+    .btn-row{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:#eaf6ff;text-decoration:none;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff5a3c);border:none;color:#061021}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+    .stats{display:flex;gap:12px}
+    .stat{flex:1;text-align:center;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent)}
+    .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+
+    .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+    .member{display:flex;gap:12px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    footer{padding:30px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:28px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .container{padding:18px}
+      nav a{margin-left:10px;font-size:14px}
+      .gallery img{height:90px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>
+          <!-- simple camera / speech bubble mark -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7a2 2 0 0 1 2-2h2l1-2h6l1 2h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1v3l-3-3H5a2 2 0 0 1-2-2V7z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:800;letter-spacing:0.2px">VUMC</div>
+          <div style="font-size:13px;color:var(--muted)">Câu lạc bộ Truyền thông</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#events">Sự kiện</a>
+        <a href="#gallery">Ảnh</a>
+        <a href="#team">Nhân sự</a>
+        <a class="cta" href="https://www.facebook.com/vumc.club" target="_blank" rel="noopener">Trang Facebook</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>VUMCC — Sáng tạo. Kể chuyện. Kết nối.</h1>
+        <p>Chúng tôi là câu lạc bộ truyền thông của trường — sản xuất nội dung, tổ chức sự kiện, thực hành nhiếp ảnh, dựng video và truyền thông sự kiện.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#join">Tham gia ngay</a>
+          <a class="btn" href="#events">Xem sự kiện</a>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Thành viên</div>
+              <div style="font-weight:700;font-size:20px">+120</div>
+            </div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Sự kiện năm nay</div>
+              <div style="font-weight:700;font-size:20px">8</div>
+            </div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Dự án</div>
+              <div style="font-weight:700;font-size:20px">15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Sự kiện sắp tới</h3>
+          <div class="events">
+            <div class="card">
+              <strong>Workshop Nhiếp ảnh</strong>
+              <div style="color:var(--muted);font-size:13px;margin-top:8px">12/11/2025 — Giảng đường A</div>
+            </div>
+            <div class="card">
+              <strong>Livestream Talkshow</strong>
+              <div style="color:var(--muted);font-size:13px;margin-top:8px">20/11/2025 — Online</div>
+            </div>
+            <div class="card">
+              <strong>Mini Film Festival</strong>
+              <div style="color:var(--muted);font-size:13px;margin-top:8px">05/12/2025 — Hội trường</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4 style="margin:0 0 8px 0">Kết nối</h4>
+          <p style="margin:0 0 12px;color:var(--muted);font-size:13px">Theo dõi chúng tôi để cập nhật hoạt động, tuyển thành viên và dự án mới.</p>
+          <a class="btn" href="https://www.facebook.com/vumc.club" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:22px">
+      <h2>Giới thiệu</h2>
+      <div class="card" style="margin-top:10px">
+        <p style="margin:0;color:var(--muted)">VUMC (VNU - USSH Media and Creative Club) là nơi học hỏi và thực hành về truyền thông đa phương tiện: từ viết nội dung, thiết kế poster, chụp ảnh, quay dựng video đến phát triển kênh truyền thông. Chúng tôi chào đón các bạn đam mê sáng tạo ở mọi trình độ.</p>
+      </div>
+    </section>
+
+    <section id="gallery" style="margin-top:22px">
+      <h2>Ảnh & Thước phim</h2>
+      <div class="gallery">
+        <img src="https://source.unsplash.com/random/800x600?camera,studio,1" alt="ảnh sự kiện 1">
+        <img src="https://source.unsplash.com/random/800x600?photography,2" alt="ảnh sự kiện 2">
+        <img src="https://source.unsplash.com/random/800x600?video,3" alt="ảnh sự kiện 3">
+        <img src="https://source.unsplash.com/random/800x600?stage,4" alt="ảnh sự kiện 4">
+        <img src="https://source.unsplash.com/random/800x600?poster,5" alt="ảnh sự kiện 5">
+        <img src="https://source.unsplash.com/random/800x600?microphone,6" alt="ảnh sự kiện 6">
+      </div>
+    </section>
+
+    <section id="team" style="margin-top:22px">
+      <h2>Ban điều hành</h2>
+      <div class="team">
+        <div class="card member">
+          <div class="avatar">NT</div>
+          <div>
+            <div style="font-weight:700">Lê Ngọc Mai</div>
+            <div style="font-size:13px;color:var(--muted)">Chủ nhiệm</div>
+          </div>
+        </div>
+        <div class="card member">
+          <div class="avatar">PQ</div>
+          <div>
+            <div style="font-weight:700">Thái Hà Trang</div>
+            <div style="font-size:13px;color:var(--muted)">Phó chủ nhiệm</div>
+          </div>
+        </div>
+        <div class="card member">
+          <div class="avatar">LT</div>
+          <div>
+            <div style="font-weight:700">Trần Thị Thanh Bình</div>
+            <div style="font-size:13px;color:var(--muted)">Phó chủ nhiệm</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <h2>Liên hệ & Đăng ký</h2>
+      <div class="card" style="margin-top:10px;display:flex;gap:14px;flex-wrap:wrap">
+        <form style="flex:1;min-width:260px;display:flex;flex-direction:column;gap:10px">
+          <input placeholder="Họ và tên" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+          <input placeholder="Email" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit">
+          <textarea placeholder="Bạn muốn tham gia vào mảng nào?" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit;min-height:100px"></textarea>
+          <button type="button" class="btn btn-primary" style="width:160px">Gửi đăng ký</button>
+        </form>
+        <div style="min-width:240px;color:var(--muted)">
+          <p style="margin-top:0"><strong>Liên hệ nhanh</strong></p>
+          <p>Email: vumc@example.com</p>
+          <p>Facebook: <a href="https://www.facebook.com/vumc.club" target="_blank" rel="noopener">vumc.club</a></p>
+          <p style="margin-top:8px;color:var(--muted);font-size:13px">(Thay địa chỉ, email và ảnh bằng nội dung thật của CLB.)</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© VUMCC — Câu lạc bộ Truyền thông VUMCC </div>
+        <div style="color:var(--muted)">Thiết kế mẫu — chỉnh sửa dễ dàng · <a href="https://www.facebook.com/vumc.club" target="_blank" rel="noopener" style="color:var(--muted)">Trang Facebook</a></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
